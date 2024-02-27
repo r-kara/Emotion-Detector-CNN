@@ -12,9 +12,9 @@
     <td>[r-kara] (https://github.com/r-kara)</td>
   </tr>
   <tr>
-    <td>...</td>
-    <td>...</td>
-    <td>...</td>
+    <td>Fadoua Doghmane</td>
+    <td>40198495</td>
+    <td>[dogmen6] (https://github.com/dogmen6)</td>
   </tr>
   <tr>
     <td>...</td>
