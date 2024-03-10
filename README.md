@@ -17,9 +17,9 @@
     <td>[dogmen6] (https://github.com/dogmen6)</td>
   </tr>
   <tr>
-    <td>...</td>
-    <td>...</td>
-    <td>...</td>
+    <td>Mariam Kachouh</td>
+    <td>40203526</td>
+    <td>[emkay21] (https://github.com/emkay21)</td>
   </tr>
 </table>
 
