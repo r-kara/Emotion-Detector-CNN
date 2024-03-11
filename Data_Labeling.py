@@ -10,14 +10,14 @@ test_folder = '/Users/kara/Desktop/engaged_dataset/test'
 
 # Iterate over the folders containing each class
 for class_folder in ('happy', 'surprised', 'engaged', 'neutral'):
-    # train set
+    # train dataset
     train_class_folder = os.path.join(train_folder, class_folder)
     for i, filename in enumerate(os.listdir(train_class_folder)):
         base, ext = os.path.splitext(filename)
         new_name = f'train_{class_folder}_{i}{ext}'
         os.rename(os.path.join(train_class_folder, filename), os.path.join(train_class_folder, new_name))
 
-    # test set
+    # test dataset
     test_class_folder = os.path.join(test_folder, class_folder)
     for i, filename in enumerate(os.listdir(test_class_folder)):
         base, ext = os.path.splitext(filename)
