@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463d6bb1-f809-42e9-a784-3ce56a5de46d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Cleaning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Facial_Recognition.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+    <list default="true" id="463d6bb1-f809-42e9-a784-3ce56a5de46d" name="Changes" comment="Data Cleaning">
+      <change beforePath="$PROJECT_DIR$/Data_Cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Cleaning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
