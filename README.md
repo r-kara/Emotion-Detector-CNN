@@ -23,12 +23,52 @@
   </tr>
 </table>
 
-<h2>Project Introduction</h2>
-<br/>
-...
-<br/>
-<h2>Methods</h2>
-<br/>
-...
-<br/>
+## Contents
 
+1. Python Code:
+
+- Data_Cleaning.py: Contains methods for cleaning the dataset by applying grayscale, cropping, light adjustments, rotation, and resizing.
+- Main.py: Main script to execute the code and methods.
+- Visualization.py: Script for visualizing the dataset.
+
+2. Dataset Documentation:
+
+- Archive: Folder containing samples of 25 images for each class (happy, focused, surprised, neutral).
+- Dataset References: Document providing provenance information for all images and datasets.
+- Link to Full Dataset: Contains two links, one directing to the dataset before cleaning and another after cleaning was performed.
+
+3. Readme File:
+
+- Enumerates the contents and describes the purpose of each file in the submission. It explains how to run the code.
+
+4. Report:
+
+- Title page.
+- Dataset section explaining the origin of the images and why they were chosen.
+- Data cleaning section explaining the process of cleaning the images.
+- Labeling section explaining how labeling was performed using the Labelbox tool.
+- Dataset Visualization section explaining how dataset visualization was done using Python and Matplotlib.
+- Reference section containing pertinent resources consulted for this project.
+- Originality Form: Contains the expectation of originality form for each team member.
+
+## Purpose
+
+This project aims to develop a convolutional neural network (CNN) model for detecting emotions from facial expressions. It involves cleaning the dataset, visualizing the data, training the model, and evaluating its performance.
+
+## Execution Steps
+
+### Data Cleaning
+1. Download the dataset on your computer
+2. Open the Main.py file.
+3. Update the paths to the paths chosen for each emotion class
+4. Call the clean_folder method and put your path as a parameter
+5. Run the script to apply preprocessing steps to the dataset images.
+
+### Data Visualization
+1. Open the Visualization.py file.
+2. Run the script to generate visualizations of the dataset.
+   
+### Notes
+1. Ensure that you have Python installed on your system.
+2. Install the required Python libraries listed in the code files.
+3. Download the dataset and place it in the appropriate directory before running the scripts.
