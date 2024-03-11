@@ -4,6 +4,7 @@
 #   2. Slight rotations to increase robustness
 #   3. Brightness adjustments
 #   4. Slight cropping
+#   5. Grayscale colour
 
 # Import the necessary libraries
 import os # Used for navigating directories/paths
