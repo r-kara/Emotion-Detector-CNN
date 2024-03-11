@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463d6bb1-f809-42e9-a784-3ce56a5de46d" name="Changes" comment="Data Cleaning">
-      <change beforePath="$PROJECT_DIR$/Data_Cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Cleaning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-    </list>
+    <list default="true" id="463d6bb1-f809-42e9-a784-3ce56a5de46d" name="Changes" comment="Data Cleaning" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +41,14 @@
       <option name="presentableId" value="Default" />
       <updated>1710025740248</updated>
     </task>
+    <task id="LOCAL-00001" summary="Data Cleaning">
+      <created>1710129286157</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710129286157</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -56,5 +61,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Data Cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data Cleaning" />
   </component>
 </project>
