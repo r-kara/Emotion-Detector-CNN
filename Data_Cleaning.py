@@ -1,4 +1,4 @@
-# This file is for cleaning our dataset images for the 4 emotions: happy, neutral, focused and surprised.
+# This file is for cleaning our dataset images for the 4 emotions: happy, neutral, focused and engaged.
 # The data cleaning steps that we used are:
 #   1. Data resizing
 #   2. Slight rotations to increase robustness
@@ -26,8 +26,15 @@ def clean_folder(folder_path):
             img = cv2.imread(file_path)
 
             # Data cleaning operations
-            # Resizing the images to 48x48 px
-            img = cv2.resize(img, (48, 48))
+
+            # Apply minor cropping to increase robustness of the model
+            crop_percentage = 0.05
+            crop_height = int(img.shape[0] * crop_percentage)
+            crop_width = int(img.shape[1] * crop_percentage)
+            img = img[crop_height: -crop_height, crop_width: -crop_width]
+
+            # Resizing the images to 100 x 100 px with interpolation method to minimize the loss of image quality
+            img = cv2.resize(img, (100, 100), interpolation=cv2.INTER_AREA)
 
             # Apply slight rotation
             rotation_angle = numpy.random.randint(-10, 10)  # Random rotation angle between -10 and 10 degrees
@@ -39,11 +46,9 @@ def clean_folder(folder_path):
             brightness_factor = numpy.random.uniform(0.5, 1.5)  # Random brightness factor between 0.5 and 1.5
             img = cv2.convertScaleAbs(img, alpha=brightness_factor, beta=0)
 
-            # Apply minor cropping to increase robustness of the model
-            crop_percentage = 0.1
-            crop_height = int(img.shape[0] * crop_percentage)
-            crop_width = int(img.shape[1] * crop_percentage)
-            img = img[crop_height: -crop_height, crop_width: -crop_width]
+            # Convert color images to grayscale
+            if len(img.shape) > 2:
+                img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
             # Save the processed image back to the same file path
             cv2.imwrite(file_path, img)
@@ -51,3 +56,4 @@ def clean_folder(folder_path):
             print(f"Processed image: {file_path}")
         else:
             print(f"Ignored non-image file: {file_path}")
+
