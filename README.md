@@ -29,7 +29,8 @@
 
 - Data_Cleaning.py: Contains methods for cleaning the dataset by applying grayscale, cropping, light adjustments, rotation, and resizing.
 - Main.py: Main script to execute the code and methods.
-- Visualization.py: Script for visualizing the dataset.
+- Data_Labeling.py: Contains a Python code to label our dataset images
+- data_visualization.py: Script for visualizing the dataset.
 
 2. Dataset Documentation:
 
