@@ -29,7 +29,8 @@
 
 - Data_Cleaning.py: Contains methods for cleaning the dataset by applying grayscale, cropping, light adjustments, rotation, and resizing.
 - Main.py: Main script to execute the code and methods.
-- Visualization.py: Script for visualizing the dataset.
+- Data_Labeling.py: Contains a Python code to label our dataset images
+- data_visualization.py: Script for visualizing the dataset.
 
 2. Dataset Documentation:
 
@@ -46,10 +47,13 @@
 - Title page.
 - Dataset section explaining the origin of the images and why they were chosen.
 - Data cleaning section explaining the process of cleaning the images.
-- Labeling section explaining how labeling was performed using the Labelbox tool.
+- Labeling section explaining how labelling was performed using a Python file to label images.
 - Dataset Visualization section explaining how dataset visualization was done using Python and Matplotlib.
 - Reference section containing pertinent resources consulted for this project.
-- Originality Form: Contains the expectation of originality form for each team member.
+
+5. Originality Form:
+
+- Contains the expectation of originality form for each team member.
 
 ## Purpose
 
@@ -58,15 +62,25 @@ This project aims to develop a convolutional neural network (CNN) model for dete
 ## Execution Steps
 
 ### Data Cleaning
-1. Download the dataset on your computer
+1. Download the dataset on your computer.
 2. Open the Main.py file.
-3. Update the paths to the paths chosen for each emotion class
-4. Call the clean_folder method and put your path as a parameter
+3. Update the paths to the paths chosen for each emotion class in the Main.py file.
+4. Call the clean_folder method and put your path as a parameter.
 5. Run the script to apply preprocessing steps to the dataset images.
 
+### Data Labeling
+1. Download the cleaned dataset on your computer.
+2. Open the Data_Labeling.py file.
+3. Update the path of your data set folders (test and train folders) at the top of the code.
+4. Make sure the label of classes remains in this format: happy, surprised, engaged and neutral.
+5. Run the script to relabel the files.
+
 ### Data Visualization
-1. Open the Visualization.py file.
-2. Run the script to generate visualizations of the dataset.
+1. Download the dataset on your computer.
+2. Open the Visualization.py file.
+3. Update the path of your data set folder at the top of the code (it is indicated).
+4. Make sure the label of classes remains in this format: happy, surprised, engaged and neutral.
+5. Run the script to generate visualizations of the dataset.
    
 ### Notes
 1. Ensure that you have Python installed on your system.
