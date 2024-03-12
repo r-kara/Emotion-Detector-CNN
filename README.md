@@ -50,7 +50,10 @@
 - Labeling section explaining how labelling was performed using a Python file to label images.
 - Dataset Visualization section explaining how dataset visualization was done using Python and Matplotlib.
 - Reference section containing pertinent resources consulted for this project.
-- Originality Form: Contains the expectation of originality form for each team member.
+
+5. Originality Form:
+
+- Contains the expectation of originality form for each team member.
 
 ## Purpose
 
@@ -59,16 +62,16 @@ This project aims to develop a convolutional neural network (CNN) model for dete
 ## Execution Steps
 
 ### Data Cleaning
-1. Download the dataset on your computer
+1. Download the dataset on your computer.
 2. Open the Main.py file.
-3. Update the paths to the paths chosen for each emotion class
-4. Call the clean_folder method and put your path as a parameter
+3. Update the paths to the paths chosen for each emotion class in the Main.py file.
+4. Call the clean_folder method and put your path as a parameter.
 5. Run the script to apply preprocessing steps to the dataset images.
 
 ### Data Visualization
-1. Download the dataset on your computer
+1. Download the dataset on your computer.
 2. Open the Visualization.py file.
-3. Update the path of your data set folder at the top of the code (it is indicated)
+3. Update the path of your data set folder at the top of the code (it is indicated).
 4. Make sure the label of classes remains in this format: happy, surprised, engaged and neutral.
 5. Run the script to generate visualizations of the dataset.
    
