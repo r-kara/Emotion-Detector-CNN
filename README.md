@@ -66,8 +66,11 @@ This project aims to develop a convolutional neural network (CNN) model for dete
 5. Run the script to apply preprocessing steps to the dataset images.
 
 ### Data Visualization
-1. Open the Visualization.py file.
-2. Run the script to generate visualizations of the dataset.
+1. Download the dataset on your computer
+2. Open the Visualization.py file.
+3. Update the path of your data set folder at the top of the code (it is indicated)
+4. Make sure the label of classes remains in this format: happy, surprised, engaged and neutral.
+5. Run the script to generate visualizations of the dataset.
    
 ### Notes
 1. Ensure that you have Python installed on your system.
