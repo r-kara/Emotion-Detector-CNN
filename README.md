@@ -46,7 +46,7 @@
 - Title page.
 - Dataset section explaining the origin of the images and why they were chosen.
 - Data cleaning section explaining the process of cleaning the images.
-- Labeling section explaining how labeling was performed using the Labelbox tool.
+- Labeling section explaining how labelling was performed using a Python file to label images.
 - Dataset Visualization section explaining how dataset visualization was done using Python and Matplotlib.
 - Reference section containing pertinent resources consulted for this project.
 - Originality Form: Contains the expectation of originality form for each team member.
