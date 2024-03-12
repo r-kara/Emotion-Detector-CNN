@@ -68,6 +68,13 @@ This project aims to develop a convolutional neural network (CNN) model for dete
 4. Call the clean_folder method and put your path as a parameter.
 5. Run the script to apply preprocessing steps to the dataset images.
 
+### Data Labeling
+1. Download the cleaned dataset on your computer.
+2. Open the Data_Labeling.py file.
+3. Update the path of your data set folders (test and train folders) at the top of the code.
+4. Make sure the label of classes remains in this format: happy, surprised, engaged and neutral.
+5. Run the script to relabel the files.
+
 ### Data Visualization
 1. Download the dataset on your computer.
 2. Open the Visualization.py file.
