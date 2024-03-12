@@ -4,7 +4,7 @@
 # Import libraries
 import os
 
-# Folders containing the train and test sets
+# IMPORTANT: Update the path to the directories in your own desktop
 train_folder = '/Users/kara/Desktop/engaged_dataset/train'
 test_folder = '/Users/kara/Desktop/engaged_dataset/test'
 
