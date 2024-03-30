@@ -1,12 +1,11 @@
-
 import os
 import random
-
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
 # the path to our data:
+# INSERT DIRECTORY TO FILE
 path_data = "C:/Users/marou/PycharmProjects/Emotion-Detector-CNN/Data_Visual/datasets/"
 
 # initializing the array for each set
