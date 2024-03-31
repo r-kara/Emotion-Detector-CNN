@@ -9,10 +9,11 @@ import torch.nn.functional as F
 # Set random seed for reproducibility
 torch.manual_seed(42)
 
-# Define transforms
 transform = transforms.Compose([
+    transforms.Grayscale(num_output_channels=1),  # Convert to grayscale
     transforms.ToTensor(),  # Convert PIL Image to Tensor
 ])
+
 
 # some variables:
 batch_size = 64
@@ -43,7 +44,7 @@ class MainCNN(nn.Module):
         self.relu2 = nn.ReLU()
 
         # Fully connected layers
-        self.fc1 = nn.Linear(10 * 10 * 25, 450)
+        self.fc1 = nn.Linear(46 * 46 * 25, 450)
         self.fc2 = nn.Linear(450, 4)  # out is 4 classes
 
     def forward(self, x):
@@ -58,7 +59,7 @@ class MainCNN(nn.Module):
         x = self.relu2(x)
 
         # switch from activation map to vectors
-        x = x.view(-1, 10 * 10 * 25)
+        x = x.view(-1, 46 * 46 * 25)
 
         # Fully connected layers
         x = self.fc1(x)
