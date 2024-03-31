@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463d6bb1-f809-42e9-a784-3ce56a5de46d" name="Changes" comment="Data Cleaning">
-      <change afterPath="$PROJECT_DIR$/Part_2/Variant_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Part_2/Variant_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Part_2/Training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Part_2/best_model.pth" beforeDir="false" afterPath="$PROJECT_DIR$/Part_2/best_model.pth" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Part_2/cnn_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Part_2/cnn_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
