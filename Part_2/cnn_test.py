@@ -5,8 +5,6 @@ from torch.utils.data import DataLoader
 from torchvision.transforms import transforms
 from torchvision.datasets import ImageFolder
 import torch.nn.functional as F
-import Variant_1
-import Variant_2
 
 # Set random seed for reproducibility
 torch.manual_seed(42)
@@ -73,12 +71,12 @@ class MainCNN(nn.Module):
 
 
 # Initialize the model, loss function, and optimizer
-model = MainCNN() # Insert the CNN Model (MainCNN() / Variant_1.Variant1CNN() / Variant_2.Variant2CNN())
+model = MainCNN()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=lr)
 
 # Training loop
-num_epochs = 10
+num_epochs = 20
 best_val_loss = float('inf')
 patience = 5
 early_stopping_counter = 0
@@ -113,7 +111,7 @@ for epoch in range(num_epochs):
         best_val_loss = val_loss
         early_stopping_counter = 0
         # Save the best model
-        torch.save(model.state_dict(), 'best_model.pth')
+        torch.save(model.state_dict(), 'Models/best_model_maincnn.pth')
     else:
         early_stopping_counter += 1
         if early_stopping_counter >= patience:
@@ -123,8 +121,5 @@ for epoch in range(num_epochs):
 print("Training completed.")
 
 # Save the trained model
-torch.save(model.state_dict(), 'final_model.pth')
+torch.save(model.state_dict(), 'Models/final_model_maincnn.pth')
 
-# Load the model from the .pth file
-model.load_state_dict(torch.load('best_model.pth'))
-model.load_state_dict(torch.load('final_model.pth'))

@@ -3,7 +3,11 @@ from torchvision.transforms import transforms
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 from PIL import Image
+
+# Import the CNN you want to load: MainCNN or Variant_1 or Variant_2
 from Part_2.cnn_test import MainCNN
+# from Variant_1 import Variant1CNN
+# from Variant_2 import Variant2CNN
 
 # Define transforms
 transform = transforms.Compose([
@@ -16,10 +20,10 @@ test_dataset = ImageFolder(root='../Part_2/NewDataset/testing', transform=transf
 test_loader = DataLoader(test_dataset, batch_size=64)
 
 # Initialize the model
-model = MainCNN()
+model = MainCNN() # Insert the CNN Model (MainCNN() / Variant1CNN() / Variant2CNN())
 
 # Load the saved model from the .pth file
-model.load_state_dict(torch.load('best_model.pth'))  # Or load 'final_model.pth' for the final model
+model.load_state_dict(torch.load('Models/best_model_maincnn.pth'))  # Insert 'best_model_maincnn.pth' or 'best_model_variant1.pth' or 'best_model_variant2.pth'
 
 # Set model to evaluation mode
 model.eval()
