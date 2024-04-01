@@ -7,6 +7,7 @@ from Part_2.cnn_test import MainCNN
 
 # Define transforms
 transform = transforms.Compose([
+    transforms.Grayscale(num_output_channels=1),  # Convert to grayscale
     transforms.ToTensor(),  # Convert PIL Image to Tensor
 ])
 
@@ -65,7 +66,7 @@ transform = transforms.Compose([
 ])
 
 # Provide the path to the individual image
-individual_image_path = '../Part_2/Image/example_1.jpg'
+individual_image_path = '../Part_2/Image/train_happy_77.jpg'
 
 # Load individual image using PIL
 individual_image = Image.open(individual_image_path)
