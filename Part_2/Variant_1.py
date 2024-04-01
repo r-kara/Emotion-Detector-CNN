@@ -81,7 +81,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=lr)
 
 # Training loop
-num_epochs = 20
+num_epochs = 15
 best_val_loss = float('inf')
 patience = 5
 early_stopping_counter = 0
@@ -123,7 +123,7 @@ for epoch in range(num_epochs):
             print("Early stopping triggered!")
             break
 
-print("Training completed.")
+print("Variant 1: Training completed.")
 
 # Save the trained model
 torch.save(model.state_dict(), 'Models/final_model_variant1.pth')
