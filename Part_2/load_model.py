@@ -3,7 +3,7 @@ from torchvision.transforms import transforms
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 from PIL import Image
-from Part_2.MainCNN import MainCNN
+from Part_2.cnn_test import MainCNN
 
 # Define transforms
 transform = transforms.Compose([

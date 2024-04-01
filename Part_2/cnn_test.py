@@ -5,6 +5,8 @@ from torch.utils.data import DataLoader
 from torchvision.transforms import transforms
 from torchvision.datasets import ImageFolder
 import torch.nn.functional as F
+import Variant_1
+import Variant_2
 
 # Set random seed for reproducibility
 torch.manual_seed(42)
@@ -71,7 +73,7 @@ class MainCNN(nn.Module):
 
 
 # Initialize the model, loss function, and optimizer
-model = MainCNN()
+model = MainCNN() # Insert the CNN Model (MainCNN() / Variant_1.Variant1CNN() / Variant_2.Variant2CNN())
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=lr)
 

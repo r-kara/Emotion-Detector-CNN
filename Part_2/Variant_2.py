@@ -31,8 +31,6 @@ class Variant2CNN(nn.Module):
         x = self.maxpool2(x)
         x = self.relu2(x)
 
-        print(x.shape)
-
         x = x.view(-1, 46 * 46 * 25)
 
         x = self.fc1(x)
