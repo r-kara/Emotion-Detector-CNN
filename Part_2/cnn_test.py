@@ -26,7 +26,7 @@ test_dataset = ImageFolder(root='../Part_2/NewDataset/testing', transform=transf
 
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=batch_size)
-test_loader = DataLoader(test_dataset, batch_size=batch_size)
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 
 class MainCNN(nn.Module):
