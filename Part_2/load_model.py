@@ -5,9 +5,9 @@ from torch.utils.data import DataLoader
 from PIL import Image
 
 # Import the CNN you want to load: MainCNN or Variant_1 or Variant_2
-# from Part_2.cnn_test import MainCNN
+from cnn_test import MainCNN
 # from Variant_1 import Variant1CNN
-from Variant_2 import Variant2CNN
+# from Variant_2 import Variant2CNN
 
 # Define transforms
 transform = transforms.Compose([
@@ -20,10 +20,10 @@ test_dataset = ImageFolder(root='../Part_2/NewDataset/testing', transform=transf
 test_loader = DataLoader(test_dataset, batch_size=64)
 
 # Initialize the model
-model = Variant2CNN() # Insert the CNN Model (MainCNN() / Variant1CNN() / Variant2CNN())
+model = MainCNN() # Insert the CNN Model (MainCNN() / Variant1CNN() / Variant2CNN())
 
 # Load the saved model from the .pth file
-model.load_state_dict(torch.load('Models/best_model_variant2.pth'))  # Insert 'best_model_maincnn.pth' or 'best_model_variant1.pth' or 'best_model_variant2.pth'
+model.load_state_dict(torch.load('Models/best_model_maincnn.pth'))  # Insert 'best_model_maincnn.pth' or 'best_model_variant1.pth' or 'best_model_variant2.pth'
 
 # Set model to evaluation mode
 model.eval()
@@ -57,10 +57,10 @@ print('Accuracy: %d %%' % (100 * correct_prediction / total_img))
 
 # Define a mapping from class index to emotion label
 class_to_emotion = {
-    0: 'Happy',
-    1: 'Neutral',
-    2: 'Surprised',
-    3: 'Engaged'
+    0: 'Engaged',
+    1: 'Happy',
+    2: 'Neutral',
+    3: 'Surprised'
 }
 
 # Define transforms
@@ -70,7 +70,7 @@ transform = transforms.Compose([
 ])
 
 # Provide the path to the individual image
-individual_image_path = '../Part_2/Image/train_happy_77.jpg'
+individual_image_path = '../Part_2/Image/train_engaged_101.jpg'
 
 # Load individual image using PIL
 individual_image = Image.open(individual_image_path)

@@ -8,29 +8,6 @@ from torchvision.transforms import transforms
 from torchvision.datasets import ImageFolder
 import torch.nn.functional as F
 
-# Set random seed for reproducibility
-torch.manual_seed(42)
-
-transform = transforms.Compose([
-    transforms.Grayscale(num_output_channels=1),  # Convert to grayscale
-    transforms.ToTensor(),  # Convert PIL Image to Tensor
-])
-
-
-# some variables:
-batch_size = 64
-lr = 0.001
-
-# Define dataset and dataloaders
-train_dataset = ImageFolder(root='../Part_2/NewDataset/training', transform=transform)
-val_dataset = ImageFolder(root='../Part_2/NewDataset/validation', transform=transform)
-test_dataset = ImageFolder(root='../Part_2/NewDataset/testing', transform=transform)
-
-train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-val_loader = DataLoader(val_dataset, batch_size=batch_size)
-test_loader = DataLoader(test_dataset, batch_size=batch_size)
-
-
 class Variant1CNN(nn.Module):
     def __init__(self):
         super(Variant1CNN, self).__init__()
@@ -74,57 +51,78 @@ class Variant1CNN(nn.Module):
 
         return x
 
+def train_variant1_cnn(model, train_loader, val_loader, num_epochs=15, lr=0.001, patience=5, model_path='Models/final_model_variant1.pth'):
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=lr)
+    best_val_loss = float('inf')
+    early_stopping_counter = 0
 
-# Initialize the model, loss function, and optimizer
-model = Variant1CNN()
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=lr)
+    for epoch in range(num_epochs):
+        # Training
+        model.train()
+        train_loss = 0.0
+        for images, labels in train_loader:
+            optimizer.zero_grad()
+            outputs = model(images)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+            train_loss += loss.item() * images.size(0)
+        train_loss /= len(train_loader.dataset)
 
-# Training loop
-num_epochs = 15
-best_val_loss = float('inf')
-patience = 5
-early_stopping_counter = 0
+        # Validation
+        model.eval()
+        val_loss = 0.0
+        for images, labels in val_loader:
+            outputs = model(images)
+            loss = criterion(outputs, labels)
+            val_loss += loss.item() * images.size(0)
+        val_loss /= len(val_loader.dataset)
 
-for epoch in range(num_epochs):
-    # Training
-    model.train()
-    train_loss = 0.0
-    for images, labels in train_loader:
-        optimizer.zero_grad()
-        outputs = model(images)
-        loss = criterion(outputs, labels)
-        loss.backward()
-        optimizer.step()
-        train_loss += loss.item() * images.size(0)
-    train_loss /= len(train_loader.dataset)
+        # Print training and validation loss
+        print(f"Epoch {epoch + 1}/{num_epochs}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
 
-    # Validation
-    model.eval()
-    val_loss = 0.0
-    for images, labels in val_loader:
-        outputs = model(images)
-        loss = criterion(outputs, labels)
-        val_loss += loss.item() * images.size(0)
-    val_loss /= len(val_loader.dataset)
+        # Early stopping
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+            early_stopping_counter = 0
+            # Save the best model
+            torch.save(model.state_dict(), 'Models/best_model_variant1.pth')
+        else:
+            early_stopping_counter += 1
+            if early_stopping_counter >= patience:
+                print("Early stopping triggered!")
+                break
 
-    # Print training and validation loss
-    print(f"Epoch {epoch + 1}/{num_epochs}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
+    print("Variant 1: Training completed.")
+    # Save the trained model
+    torch.save(model.state_dict(), model_path)
 
-    # Early stopping
-    if val_loss < best_val_loss:
-        best_val_loss = val_loss
-        early_stopping_counter = 0
-        # Save the best model
-        torch.save(model.state_dict(), 'Models/best_model_variant1.pth')
-    else:
-        early_stopping_counter += 1
-        if early_stopping_counter >= patience:
-            print("Early stopping triggered!")
-            break
+if __name__ == "__main__":
+    # Set random seed for reproducibility
+    torch.manual_seed(42)
 
-print("Variant 1: Training completed.")
+    transform = transforms.Compose([
+        transforms.Grayscale(num_output_channels=1),  # Convert to grayscale
+        transforms.ToTensor(),  # Convert PIL Image to Tensor
+    ])
 
-# Save the trained model
-torch.save(model.state_dict(), 'Models/final_model_variant1.pth')
+    batch_size = 64
+    lr = 0.001
+
+    # Define dataset and dataloaders
+    train_dataset = ImageFolder(root='../Part_2/NewDataset/training', transform=transform)
+    val_dataset = ImageFolder(root='../Part_2/NewDataset/validation', transform=transform)
+    test_dataset = ImageFolder(root='../Part_2/NewDataset/testing', transform=transform)
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size)
+
+    # Initialize the model
+    model = Variant1CNN()
+
+    # Train the model
+    train_variant1_cnn(model, train_loader, val_loader)
+
 
