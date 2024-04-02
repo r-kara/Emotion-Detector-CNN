@@ -6,6 +6,28 @@ from torchvision.transforms import transforms
 from torchvision.datasets import ImageFolder
 import torch.nn.functional as F
 
+# Set random seed for reproducibility
+torch.manual_seed(42)
+
+transform = transforms.Compose([
+    transforms.Grayscale(num_output_channels=1),  # Convert to grayscale
+    transforms.ToTensor(),  # Convert PIL Image to Tensor
+])
+
+
+# some variables:
+batch_size = 64
+lr = 0.001
+
+# Define dataset and dataloaders
+train_dataset = ImageFolder(root='../Part_2/NewDataset/training', transform=transform)
+val_dataset = ImageFolder(root='../Part_2/NewDataset/validation', transform=transform)
+test_dataset = ImageFolder(root='../Part_2/NewDataset/testing', transform=transform)
+
+train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+val_loader = DataLoader(val_dataset, batch_size=batch_size)
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
 class MainCNN(nn.Module):
     def __init__(self):
         super(MainCNN, self).__init__()
