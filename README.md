@@ -31,6 +31,13 @@
 - Main.py: Main script to execute the code and methods.
 - Data_Labeling.py: Contains a Python code to label our dataset images
 - data_visualization.py: Script for visualizing the dataset.
+- Variant_1.py: Contains the first variant of the main CNN model.
+- Variant_2.py: Contains the second variant of the main CNN model.
+- cnn_test.py: Contains the main CNN model.
+- dataset_labeling.py: Contains a Python script to label our images in each folder of our dataset.
+- evaluation.py: Contains a Python code to evaluate the performance of our CNN models.
+- load_model.py: Contains a Python script to check our models' accuracy and make predictions on individual images.
+- Split_Dataset.py: Contains a Python script to split our images into 3 categories: Validation, Testing, and Training sets.
 
 2. Dataset Documentation:
 
@@ -81,6 +88,25 @@ This project aims to develop a convolutional neural network (CNN) model for dete
 3. Update the path of your data set folder at the top of the code (it is indicated).
 4. Make sure the label of classes remains in this format: happy, surprised, engaged and neutral.
 5. Run the script to generate visualizations of the dataset.
+
+### Training
+1. Choose the CNN you want to train: cnn_test.py (contains the main CNN), Variant_1.py or Variant_2.py.
+2. Run the Python script you chose in your Python IDE.
+3. Open your terminal to see the progression of the training.
+4. At training completion, two .pth files containing the best model and final model will be generated.
+
+### Model Accuracy and Prediction
+1. Open the load_model.py file.
+2. Import the CNN model you want to use (MainCNN, Variant1CNN or Variant2CNN).
+3. Initialize the model attribute to the CNN model you want to use (MainCNN, Variant1CNN or Variant2CNN).
+4. Update the .pth file you want to use to check the accuracy of the model ('best_model_maincnn.pth' or 'best_model_variant1.pth' or 'best_model_variant2.pth').
+5. For single image prediction, update the individual_image_path to the image path you want to get the prediction from.
+6. Run the load_model.py file.
+
+### Evaluation and Metrics
+1. Open the evaluation.py script.
+2. Run the script.
+3. All performance matrics for MainCNN, Variant_1 and Variant_2 will appear in your terminal.
    
 ### Notes
 1. Ensure that you have Python installed on your system.
