@@ -106,7 +106,8 @@ This project aims to develop a convolutional neural network (CNN) model for dete
 ### Evaluation and Metrics
 1. Open the evaluation.py script.
 2. Run the script.
-3. All performance matrics for MainCNN, Variant_1 and Variant_2 will appear in your terminal.
+3. All performance metrics for MainCNN, Variant_1 and Variant_2 will appear in your terminal.
+4. 3 confusion matrices will pop up in your window (one for each CNN model).
    
 ### Notes
 1. Ensure that you have Python installed on your system.
