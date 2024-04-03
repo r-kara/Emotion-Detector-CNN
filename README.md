@@ -90,6 +90,9 @@ This project aims to develop a convolutional neural network (CNN) model for dete
 5. Run the script to generate visualizations of the dataset.
 
 ### Training
+
+From here, make sure to be in the Part_2 directory when executing files.
+
 1. Choose the CNN you want to train: cnn_test.py (contains the main CNN), Variant_1.py or Variant_2.py.
 2. Run the Python script you chose in your Python IDE.
 3. Open your terminal to see the progression of the training.
