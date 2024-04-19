@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26cc076a-3841-4999-96a9-49d269f4dd7a" name="Changes" comment="Committing some files that includes a python interpreter">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="26cc076a-3841-4999-96a9-49d269f4dd7a" name="Changes" comment="Committing for part 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +110,17 @@
       <workItem from="1713411837491" duration="253000" />
       <workItem from="1713413181149" duration="671000" />
       <workItem from="1713452281602" duration="16775000" />
+      <workItem from="1713487015098" duration="226000" />
     </task>
+    <task id="LOCAL-00001" summary="Committing for part 3">
+      <option name="closed" value="true" />
+      <created>1713487172540</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713487172540</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,5 +136,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Committing for part 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Committing for part 3" />
   </component>
 </project>
