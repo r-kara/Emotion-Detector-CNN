@@ -23,7 +23,7 @@ test_loader = DataLoader(test_dataset, batch_size=64)
 model = MainCNN() # Insert the CNN Model (MainCNN() / Variant1CNN() / Variant2CNN())
 
 # Load the saved model from the .pth file
-model.load_state_dict(torch.load('Models/best_model_maincnn.pth'))  # Insert 'age_best_model_maincnn.pth' or 'best_model_variant1.pth' or 'best_model_variant2.pth'
+model.load_state_dict(torch.load('Models/best_model_maincnn.pth'))  # Insert 'best_model_variant1.pth' or 'best_model_variant2.pth'
 
 # Set model to evaluation mode
 model.eval()
