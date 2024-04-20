@@ -132,7 +132,7 @@ def train_model_kfold(model, datas, num_epochs=10, lr=0.001, patience=5, numKfol
                 best_val_loss = val_loss
                 early_stopping_counter = 0
                 # Save the best model
-                # torch.save(model.state_dict(), 'Models/best_model_maincnn.pth')
+                # torch.save(model.state_dict(), 'Models/age_best_model_maincnn.pth')
             else:
                 early_stopping_counter += 1
                 if early_stopping_counter >= patience:
@@ -141,7 +141,7 @@ def train_model_kfold(model, datas, num_epochs=10, lr=0.001, patience=5, numKfol
 
         print(f"Fold {fold_nb}: Training completed.")
         # Save the trained model
-        # torch.save(model.state_dict(), 'Models/final_model_maincnn.pth')
+        # torch.save(model.state_dict(), 'Models/age_final_model_maincnn.pth')
 
         # Evaluating the fold
         model.eval()
