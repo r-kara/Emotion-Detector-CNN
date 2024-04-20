@@ -185,6 +185,7 @@ def train_model_kfold(model, datas, num_epochs=10, lr=0.001, patience=5, numKfol
     avg_accuracy = sum(accuracy_fold) / len(accuracy_fold)
     avg_precision_micro = sum(precision_micro_fold) / len(precision_micro_fold)
     avg_recall_micro = sum(recall_micro_fold) / len(recall_micro_fold)
+
     avg_f1_micro = sum(f1_micro_fold) / len(f1_micro_fold)
 
     avg_precision_macro = sum(precision_macro_fold) / len(precision_macro_fold)
@@ -196,6 +197,7 @@ def train_model_kfold(model, datas, num_epochs=10, lr=0.001, patience=5, numKfol
     print("Micro values: ")
     print(f" Average Precision: {avg_precision_micro}, Average Recall: {avg_recall_micro}, Average F1: {avg_f1_micro}")
     print("Macro values: ")
+    print(f" Average Precision: {avg_precision_macro}, Average Recall: {avg_recall_macro}, Average F1: {avg_f1_macro}")
 
 
 if __name__ == "__main__":
