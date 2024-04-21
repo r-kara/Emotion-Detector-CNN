@@ -38,12 +38,20 @@
 - evaluation.py: Contains a Python code to evaluate the performance of our CNN models.
 - load_model.py: Contains a Python script to check our models' accuracy and make predictions on individual images.
 - Split_Dataset.py: Contains a Python script to split our images into 3 categories: Validation, Testing, and Training sets.
+- age_dataset_labeling.py: Contains a Python script to label our Age dataset
+- bias_dataset_labeling.py: Contains a Python script to label our Gender dataset
+- bias_split_dataset.py: Contains a Python script to split our images into categories: test and train
+- age_train.py: This code retrains the Age dataset after the mitigation process
+- gender_train.py: This code retrains the Gender dataset after the mitigation process
+- age_evaluation.py: Evaluates the final age model performance
+- gender_evaluation.py: Evaluates the final gender model performance
+- cnn_kfold.py: Contains a Python script to enhance the robustness and reliability of the evaluation
 
 2. Dataset Documentation:
 
 - Archive: Folder containing samples of 25 images for each class (happy, focused, surprised, neutral).
 - Dataset References: Document providing provenance information for all images and datasets.
-- Link to Full Dataset: Contains two links, one directing to the dataset before cleaning and another after cleaning was performed.
+- Link to Full Dataset: Contains 4 links, one directing to the dataset after cleaning (Part 1), the dataset from Part 2, the Age dataset and the Gender dataset (Part 3).
 
 3. Readme File:
 
@@ -52,11 +60,14 @@
 4. Report:
 
 - Title page.
-- Dataset section explaining the origin of the images and why they were chosen.
-- Data cleaning section explaining the process of cleaning the images.
-- Labeling section explaining how labelling was performed using a Python file to label images.
-- Dataset Visualization section explaining how dataset visualization was done using Python and Matplotlib.
-- Reference section containing pertinent resources consulted for this project.
+- Dataset section: explaining the origin of the images and why they were chosen.
+- Data cleaning section: explaining the process of cleaning the images.
+- Labeling section: explaining how labelling was performed using a Python file to label images.
+- Dataset Visualization section: explaining how dataset visualization was done using Python and Matplotlib.
+- CNN Architecture section: CNN Model Overview
+- Evaluation section: explaining our k-fold cross-evaluation process
+- Bias Analysis section: to report the results from the bias analysis and the steps taken for mitigation 
+- Reference section: containing pertinent resources consulted for this project.
 
 5. Originality Form:
 
