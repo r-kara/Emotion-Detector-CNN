@@ -46,7 +46,7 @@ def evaluate_model(model, data_loader):
 if __name__ == '__main__':
     # Load the model
     model = MainCNN()
-    model.load_state_dict(torch.load('Models/age_final_model_maincnn.pth')) ##../Part_2/Models/final_model_maincnn.pth or Models/age_final_model_maincnn.pth
+    model.load_state_dict(torch.load('../Part_2/Models/final_model_maincnn.pth')) ##../Part_2/Models/final_model_maincnn.pth or Models/age_final_model_maincnn.pth
 
     # Define dictionaries to store evaluation results for each age group
     age_groups = ['Adult', 'Senior', 'Young']

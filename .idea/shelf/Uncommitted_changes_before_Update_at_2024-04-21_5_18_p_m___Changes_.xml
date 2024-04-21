@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_2024-04-21_5_18_p_m__[Changes]" date="1713734335872" recycled="false" toDelete="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-04-21_5_18_p_m__[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2024-04-21 5:18 p.m. [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Part_3/Models/age_final_model_maincnn.pth" />
+    <option name="AFTER_PATH" value="Part_3/Models/age_final_model_maincnn.pth" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-04-21_5_18_p_m__[Changes]/age_final_model_maincnn.pth" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Part_3/Models/age_best_model_maincnn.pth" />
+    <option name="AFTER_PATH" value="Part_3/Models/age_best_model_maincnn.pth" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-04-21_5_18_p_m__[Changes]/age_best_model_maincnn.pth" />
+  </binary>
+</changelist>
