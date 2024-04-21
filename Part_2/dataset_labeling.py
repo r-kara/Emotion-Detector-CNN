@@ -2,9 +2,9 @@
 import os
 
 # Relative path
-train_folder = 'Part_2/NewDataset/training'
-test_folder = 'Part_2/NewDataset/testing'
-val_folder = 'Part_2/NewDataset/validation'
+train_folder = 'NewDataset/training'
+test_folder = 'NewDataset/testing'
+val_folder = 'NewDataset/validation'
 
 # Rename files with sequential numbering
 def rename_files(folder_path, class_name):
