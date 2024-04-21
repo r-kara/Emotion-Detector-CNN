@@ -105,9 +105,9 @@ def compute_and_print_table_metrics(metrics):
 # Loads the 3 models
 def load_models():
     model_dict = {
-        'main_model': (MainCNN(), 'Models/final_model_maincnn.pth'),
-        'variant_1': (Variant1CNN(), 'Models/final_model_variant1.pth'),
-        'variant_2': (Variant2CNN(), 'Models/final_model_variant2.pth'),
+        'main_model': (MainCNN(), 'Models/best_model_maincnn.pth'),
+        'variant_1': (Variant1CNN(), 'Models/best_model_variant1.pth'),
+        'variant_2': (Variant2CNN(), 'Models/best_model_variant2.pth'),
     }
     models = {}
     for name, (model, model_path) in model_dict.items():

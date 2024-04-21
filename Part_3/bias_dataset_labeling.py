@@ -5,10 +5,15 @@ This script takes a dataset that has been split according to a bias (ex: Gender)
 '''
 
 # Define folder paths
-male_train_folder = '/Users/kara/Desktop/Gender/Male/train'
-male_test_folder = '/Users/kara/Desktop/Gender/Male/test'
-female_train_folder = '/Users/kara/Desktop/Gender/Female/train'
-female_test_folder = '/Users/kara/Desktop/Gender/Female/test'
+#male_train_folder = '/Users/kara/Desktop/Gender/Male/train'
+#male_test_folder = '/Users/kara/Desktop/Gender/Male/test'
+#female_train_folder = '/Users/kara/Desktop/Gender/Female/train'
+#female_test_folder = '/Users/kara/Desktop/Gender/Female/test'
+current_dir = os.path.dirname(os.path.abspath(__file__))
+male_train_folder = os.path.join(current_dir, 'Gender/Male/train')
+male_test_folder = os.path.join(current_dir, 'Gender/Male/test')
+female_train_folder = os.path.join(current_dir, 'Gender/Female/train')
+female_test_folder = os.path.join(current_dir, 'Gender/Female/test')
 
 # Function to rename files
 def rename_files(folder_path, class_name, gender):

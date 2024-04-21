@@ -8,6 +8,12 @@ import torch.nn.functional as F
 from sklearn.model_selection import KFold
 from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+
+
+# from test import kFoldCrossValidation
 
 # Set random seed for reproducibility
 torch.manual_seed(42)
@@ -20,7 +26,6 @@ transform = transforms.Compose([
 # some variables:
 batch_size = 64
 lr = 0.001
-
 
 # Define dataset and dataloaders
 # train_dataset = ImageFolder(root='../Part_2/NewDataset/training', transform=transform)
@@ -160,7 +165,7 @@ def train_model_kfold(model, datas, num_epochs=10, lr=0.001, patience=5, numKfol
         precision_micro, recall_micro, f1_micro, _ = precision_recall_fscore_support(actual, predictions,
                                                                                      average='micro')
         precision_micro_fold.append(precision_micro)
-        recall_micro_fold.append(recall_micro_fold)
+        recall_micro_fold.append(recall_micro)
         f1_micro_fold.append(f1_micro)
 
         # Macro metrics
@@ -195,9 +200,9 @@ def train_model_kfold(model, datas, num_epochs=10, lr=0.001, patience=5, numKfol
     print("Average values:")
     print(f" Average Accuracy: {avg_accuracy:.4f}")
     print("Micro values: ")
-    print(f" Average Precision: {avg_precision_micro}, Average Recall: {avg_recall_micro}, Average F1: {avg_f1_micro}")
+    print(f" Average Precision: {avg_precision_micro:.4f}, Average Recall: {avg_recall_micro:.4f}, Average F1: {avg_f1_micro:.4f}")
     print("Macro values: ")
-    print(f" Average Precision: {avg_precision_macro}, Average Recall: {avg_recall_macro}, Average F1: {avg_f1_macro}")
+    print(f" Average Precision: {avg_precision_macro:.4f}, Average Recall: {avg_recall_macro:.4f}, Average F1: {avg_f1_macro:.4f}")
 
 
 if __name__ == "__main__":
@@ -228,4 +233,4 @@ if __name__ == "__main__":
     model = MainCNN()
 
     # Train the model
-    train_model_kfold(model, data, kfolds)
+    train_model_kfold(model, data)
