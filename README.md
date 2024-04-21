@@ -122,7 +122,27 @@ From here, make sure to be in the Part_2 directory when executing files.
 2. Run the script.
 3. All performance metrics for MainCNN, Variant_1 and Variant_2 will appear in your terminal.
 4. 3 confusion matrices will pop up in your window (one for each CNN model).
-   
+
+### K-fold Cross-validation
+
+From here, make sure to be in the Part_3 directory when executing files.
+
+1. Open the cnn_kfold.py file.
+2. Run the load_model.py file.
+3. Open the console and wait until the 10 folds are completed.
+
+### Age Evaluation
+1. Open the age_evaluation.py file.
+2. In the main method, update the model you would like to load (../Part_2/Models/final_model_maincnn.pth or Models/age_final_model_maincnn.pth)
+3. Run the file
+4. Open the console and look at the results.
+
+### Gender Evaluation
+1. Open the gender_evaluation.py file.
+2. In the main method, update the model you would like to load (../Part_2/Models/final_model_maincnn.pth or Models/gender_final_model_maincnn.pth)
+3. Run the file
+4. Open the console and look at the results.
+
 ### Notes
 1. Ensure that you have Python installed on your system.
 2. Install the required Python libraries listed in the code files.
