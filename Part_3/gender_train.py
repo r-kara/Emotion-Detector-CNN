@@ -67,7 +67,7 @@ class MainCNN(nn.Module):
 
         return x
 
-def train_model(model, train_loader, num_epochs=20, lr=0.001, patience=7):
+def train_model(model, train_loader, num_epochs=15, lr=0.001, patience=7):
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=lr)
     best_test_loss = float('inf')
