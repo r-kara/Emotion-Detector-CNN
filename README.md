@@ -32,10 +32,10 @@ Part 1:
 - Data_Cleaning.py: Contains methods for cleaning the dataset by applying grayscale, cropping, light adjustments, rotation, and resizing.
 - Main.py: Main script to execute the code and methods.
 - Data_Labeling.py: Contains a Python code to label our dataset images
+- data_visualization.py: Script for visualizing the dataset.
 
 Part 2:
 
-- data_visualization.py: Script for visualizing the dataset.
 - Variant_1.py: Contains the first variant of the main CNN model.
 - Variant_2.py: Contains the second variant of the main CNN model.
 - cnn_test.py: Contains the main CNN model.
