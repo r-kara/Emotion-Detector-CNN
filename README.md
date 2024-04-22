@@ -27,9 +27,14 @@
 
 1. Python Code:
 
+Part 1:
+
 - Data_Cleaning.py: Contains methods for cleaning the dataset by applying grayscale, cropping, light adjustments, rotation, and resizing.
 - Main.py: Main script to execute the code and methods.
 - Data_Labeling.py: Contains a Python code to label our dataset images
+
+Part 2:
+
 - data_visualization.py: Script for visualizing the dataset.
 - Variant_1.py: Contains the first variant of the main CNN model.
 - Variant_2.py: Contains the second variant of the main CNN model.
@@ -38,6 +43,9 @@
 - evaluation.py: Contains a Python code to evaluate the performance of our CNN models.
 - load_model.py: Contains a Python script to check our models' accuracy and make predictions on individual images.
 - Split_Dataset.py: Contains a Python script to split our images into 3 categories: Validation, Testing, and Training sets.
+
+Part 3: 
+
 - age_dataset_labeling.py: Contains a Python script to label our Age dataset
 - bias_dataset_labeling.py: Contains a Python script to label our Gender dataset
 - bias_split_dataset.py: Contains a Python script to split our images into categories: test and train
