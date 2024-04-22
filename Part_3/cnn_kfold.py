@@ -183,7 +183,7 @@ def train_model_kfold(model, datas, num_epochs=10, lr=0.001, patience=5, numKfol
             f" Micro Precision: {precision_micro:.4f}, Micro Recall: {recall_micro:.4f}, Micro F1-score: {f1_micro:.4f}")
         print("Macro values: ")
         print(
-            f" Macro Precision: {precision_macro:.4f}, Micro Recall: {recall_macro:.4f}, Micro F1-score: {f1_macro:.4f}")
+            f" Macro Precision: {precision_macro:.4f}, Macro Recall: {recall_macro:.4f}, Macro F1-score: {f1_macro:.4f}")
         # Updating the fold number
         fold_nb += 1
     # Calculating average of metrics of all folds
@@ -224,7 +224,7 @@ if __name__ == "__main__":
     # test_dataset = ImageFolder(root='../Part_2/NewDataset/testing', transform=transform)
 
     # Getting the dataset
-    data = ImageFolder(root='../Part_3/Dataset', transform=transform)
+    data = ImageFolder(root='../Part_3/Gender_dataset', transform=transform)
     # train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     # val_loader = DataLoader(val_dataset, batch_size=batch_size)
     # test_loader = DataLoader(test_dataset, batch_size=batch_size)
